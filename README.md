@@ -5,6 +5,8 @@ A collection of reusable **Agent Skills** for SuperAGI platform.
 ## Skills
 
 - [`cold-outreach/`](./cold-outreach/) — outreach messaging + personalization
+- [`cold-outreach/setup/`](./cold-outreach/setup/) — workspace, app install, mailbox and LinkedIn setup
+- [`cold-outreach/find-new-leads/`](./cold-outreach/find-new-leads/) — step-by-step "Find New Leads" campaign creation wizard
 - [`chats/`](./chats/) — chat-based workflows via CLI
 - [`crm/`](./crm/) — CRM operations via CLI
 - [`crm/lists/`](./crm/lists/) — create, manage, filter, and export CRM Lists
