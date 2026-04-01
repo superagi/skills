@@ -12,6 +12,9 @@ A collection of reusable **Agent Skills** for SuperAGI platform.
 - [`crm/lists/`](./crm/lists/) — create, manage, filter, and export CRM Lists
 - [`crm/tasks/`](./crm/tasks/) — create and manage CRM Tasks, log calls/meetings/notes
 - [`crm/records/`](./crm/records/) — CRUD for Contacts, Leads, Companies, and Deals (web UI)
+- [`workflows/`](./workflows/) — visual automation builder: triggers, 30+ node types, canvas, lifecycle
+- [`process-design/`](./process-design/) — simplified process flows for CRM data collection and routing
+- [`forms/`](./forms/) — form definitions, versioning, runtime, submissions API
 - [`navigation/`](./navigation/) — screen/sidebar navigation
 - [`prospect/`](./prospect/) — prospect research + qualification
 - [`sequences/`](./sequences/) — multi-step outreach sequences
