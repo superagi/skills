@@ -26,6 +26,9 @@ A collection of reusable **Agent Skills** for SuperAGI platform.
 - [`process-design/`](./process-design/) — simplified process flows for CRM data collection and routing
 - [`forms/`](./forms/) — form definitions, versioning, runtime, and submissions
 
+### Analytics
+- [`ai-analytics/`](./ai-analytics/) — AI Analytics: spaces, dashboards, chart builder, 12 chart types, template library, calculated fields, and CSV export
+
 ### Navigation & Settings
 - [`navigation/`](./navigation/) — screen/sidebar navigation
 - [`settings/`](./settings/) — settings + configuration guidance
@@ -41,6 +44,8 @@ prospect ──→ crm/records.md ←── crm/lists.md ←── sequences
              crm/tasks.md                       cold-outreach
                   ↑                                    ↑
              workflows ←─── forms ──→ process-design
+                  ↑
+             ai-analytics ←── crm/records.md
 ```
 
 ## Repo layout
