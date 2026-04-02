@@ -26,6 +26,9 @@ A collection of reusable **Agent Skills** for SuperAGI platform.
 - [`process-design/`](./process-design/) — simplified process flows for CRM data collection and routing
 - [`forms/`](./forms/) — form definitions, versioning, runtime, and submissions
 
+### Meetings
+- [`meeting-links/`](./meeting-links/) — create meeting agents (One-on-One/Round Robin), booking flow, reschedule/cancel, meeting logs, AI notetaker, recordings, and transcripts
+
 ### Analytics
 - [`ai-analytics/`](./ai-analytics/) — AI Analytics: spaces, dashboards, chart builder, 12 chart types, template library, calculated fields, and CSV export
 
