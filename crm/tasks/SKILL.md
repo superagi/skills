@@ -6,6 +6,18 @@ platform: [linux, macos, windows]
 
 # SuperAGI CRM — CRM Tasks
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `crm-records` | Tasks are associated with Contacts, Leads, Companies, and Deals via the Object Hierarchy panel. Use `crm-records` to look up or create those records. |
+| `crm-lists` | Bulk selecting records inside a List → "Add CRM Task" creates tasks for those records in bulk. Use `crm-lists` to manage the list of records first. |
+| `sequences` | Tasks of type "Manual Phone Call Task", "Manual Email Task", etc. in Sequences surface as CRM Tasks. Use `crm-tasks` to action them. |
+| `workflows` | The Workflow "Create Task" node automatically creates CRM Tasks. Use `workflows` to automate task creation based on CRM events. |
+| `crm` | CLI-based access to the `crm_tasks` object type — use for bulk task queries, updates, or automation scripts. |
+
+---
+
 CRM Tasks is the task management module inside SuperAGI CRM. It lets you create and assign tasks, track their status and priority, log activities (notes, emails, calls, meetings), and associate tasks with CRM records (Contacts, Leads, Companies, Deals). Tasks move through a lifecycle: **Todo → In Progress → Done**.
 
 ## Sidebar Navigation

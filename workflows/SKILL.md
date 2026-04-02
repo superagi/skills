@@ -10,6 +10,19 @@ Workflows (also called Automations) is SuperAGI's visual automation builder. Use
 
 **URL:** `/workflows` (list page) | `/workflows/:id` (editor)
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `process-design` | Process Design is a simplified version of Workflows focused on CRM data collection. Use `process-design` for internal form-based processes; use `workflows` for full sales/marketing automation. |
+| `forms` | The Form node in Workflows uses the Forms service. Use `forms` to create, version, and publish forms before embedding them in a workflow. |
+| `crm/records` | Workflow nodes (Create Entity, Update Entity) create and update CRM records (leads, contacts, companies, deals). Use `crm/records` to understand the fields and structure. |
+| `crm/lists` | The "Add to List" and "Remove from List" workflow nodes manage CRM list membership. Use `crm/lists` to understand list structure. |
+| `crm/tasks` | The "Create Task" workflow node creates CRM Tasks. Use `crm/tasks` to view and action those tasks. |
+| `sequences` | The "Add to Sequence" / "Remove from Sequence" workflow nodes enroll contacts in sequences. Use `sequences` to build those sequences. |
+| `cold-outreach` | Cold Outreach trigger events (`form_submitted`, `email_replied`) can be used as workflow triggers. Use `cold-outreach` to manage the campaigns. |
+| `prospect` | The "Prospect Leads" and "Prospect Companies" workflow nodes use the same filters as the Prospect module. Use `prospect` to understand filter options. |
+
 ---
 
 ## Editor Layout (3-Panel)

@@ -6,6 +6,19 @@ platform: [linux, macos]
 
 # SuperAGI CRM — Lists
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `crm-records` | Records (Contacts, Leads, Companies) are the items inside a list. Use `crm-records` to create/edit/delete the records that populate lists. |
+| `crm-tasks` | Bulk selecting records inside a list allows you to click "Add CRM Task" — creates tasks for those records. Navigate to `crm-tasks` to view/manage those tasks. |
+| `sequences` | Bulk select records in a list → "Add to Sequence" to enroll them in outreach. Use `sequences` skill to build and manage those sequences. |
+| `cold-outreach-find-new-leads` | Saved lists can be used in Cold Outreach via "Select a list" campaign type. Use `cold-outreach-find-new-leads` to configure that campaign. |
+| `prospect` | In Prospect Leads, the "Target Company Domains → Select a list" filter references saved company lists. Use `crm-lists` to create those company lists first. |
+| `workflows` | Workflow nodes (Add to List, Remove from List) automatically manage list membership. Use `workflows` skill to set up those automations. |
+
+---
+
 Lists is how you organise and segment your CRM records — Contacts, Companies, or Leads — into named, reusable groups. You create a list, add records to it, apply filters to narrow down the data, save filtered views for quick access, and export or delete lists as needed. Lists sit inside the CRM module and act as the primary way to segment and target your records for outreach or analysis.
 
 ## Sidebar Navigation

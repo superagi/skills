@@ -6,6 +6,19 @@ platform: [linux, macos]
 
 # Cold Outreach — Create Campaign: Find New Leads
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach-setup` | Must be completed first — workspace, app install, mailbox connection are prerequisites for this wizard. |
+| `cold-outreach` | After launching, use `cold-outreach` to monitor campaign status, view replies, check analytics, and manage the campaign. |
+| `crm-records` | Leads found and enriched by this campaign land in CRM as Lead records. Use `crm-records` to view, edit, or act on them. |
+| `crm-lists` | The "Select a list" campaign type (not covered here) uses CRM Lists as the lead source. Use `crm-lists` to create and manage those lists. |
+| `sequences` | Cold Outreach is AI-driven and volume-oriented. For manual, step-by-step multi-channel outreach, use `sequences` instead. |
+| `prospect` | ICP filters in Step 1 mirror the filters in Prospect Leads. Use `prospect` skill to understand available filter options. |
+
+---
+
 This flow creates a new campaign where SuperAGI's AI SDR automatically finds and prospects new leads matching your ICP (Ideal Customer Profile).
 
 **Direct URL:** `https://sales.superagi.com/cold-outreach`

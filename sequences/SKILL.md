@@ -11,6 +11,17 @@ Sequences are manually-built, multi-channel outreach workflows with granular con
 **Direct URL:** `https://sales.superagi.com/sequences`
 **Sidebar path:** Engage > Sequences
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach` | Alternative outreach method. Cold Outreach is AI-driven and auto-sources leads; Sequences require you to build steps and add contacts manually. Choose based on level of control needed. |
+| `crm/records` | Leads and Contacts are added to Sequences from CRM records. Manual step tasks (Phone Call, Email) also associate with CRM records. Use `crm/records` to look up or create those records. |
+| `crm/lists` | The "Select a list" option when adding contacts uses CRM Lists. Use `crm/lists` to manage those lists. |
+| `crm/tasks` | Manual step types (Manual Email Task, Manual Phone Call Task, etc.) create CRM Tasks. Use `crm/tasks` to view and complete those tasks. |
+| `workflows` | The "Add to Sequence" and "Remove from Sequence" workflow nodes enroll contacts automatically. Use `workflows` to trigger sequence enrollment based on CRM events. |
+| `prospect` | Prospects found in Prospect Leads can be added directly to a Sequence via "Add to Sequence". Use `prospect` to find and filter those prospects first. |
+
 ## Sequences List Page (`/sequences`)
 
 **Left sidebar:** Folder system for organizing sequences. "All Sequences" is the default. Custom folders can be created (add_icon) or deleted (delete_icon).

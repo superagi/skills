@@ -6,6 +6,16 @@ platform: [linux, macos]
 
 # SuperAGI Cold Outreach — Initial Setup
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach` | The main Cold Outreach skill covering the campaign list page, reply management, and campaign detail. Complete setup here first, then use `cold-outreach` to manage campaigns. |
+| `cold-outreach-find-new-leads` | Once setup is done, use this skill to create a "Find New Leads" campaign through the 5-step wizard. |
+| `sequences` | Sequences also require a connected mailbox (same Settings → Personal Mailboxes). Setup done here applies to both Cold Outreach and Sequences. |
+
+---
+
 Before creating campaigns, you need a workspace with the CRM and Cold Outreach apps installed, a connected mailbox, and (optionally) a LinkedIn account.
 
 **Base URL:** `https://sales.superagi.com`
