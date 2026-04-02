@@ -12,10 +12,10 @@ Prospecting is how you find potential customers from SuperAGI's external databas
 
 | Skill | Relationship |
 |-------|-------------|
-| `crm/records` | "Add to Leads" and "Add to Companies" save prospects directly into CRM as Lead or Company records. Use `crm/records` to view, edit, or act on them after saving. |
-| `crm/lists` | "Add to List" saves prospects into a named CRM List. The "Target Company Domains → Select a list" filter in Prospect Leads reads from saved company lists. Use `crm/lists` to manage those lists. |
+| `crm/records.md` | "Add to Leads" and "Add to Companies" save prospects directly into CRM as Lead or Company records. Use `crm/records.md` to view, edit, or act on them after saving. |
+| `crm/lists.md` | "Add to List" saves prospects into a named CRM List. The "Target Company Domains → Select a list" filter in Prospect Leads reads from saved company lists. Use `crm/lists.md` to manage those lists. |
 | `sequences` | "Add to Sequence" from Prospect Leads drops leads directly into an outreach sequence. Use `sequences` to build those sequences first. |
-| `cold-outreach/find-new-leads` | The ICP filters in Cold Outreach Step 1 mirror the Prospect Leads filter panel. Use `prospect` to manually validate which filters return the right leads before configuring a Cold Outreach campaign. |
+| `cold-outreach/find-new-leads.md` | The ICP filters in Cold Outreach Step 1 mirror the Prospect Leads filter panel. Use `prospect` to manually validate which filters return the right leads before configuring a Cold Outreach campaign. |
 | `workflows` | The "Prospect Leads" and "Prospect Companies" workflow nodes use the same filter criteria as this skill. Use `workflows` to automate prospect sourcing. |
 
 ## Sidebar Navigation

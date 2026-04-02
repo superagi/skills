@@ -10,9 +10,9 @@ platform: [linux, macos]
 
 | Skill | Relationship |
 |-------|-------------|
-| `crm/records` | Web UI skill for creating, editing, deleting, and searching Contacts, Leads, Companies, and Deals. Use this CLI skill for bulk operations or automation; use `crm/records` for UI-based operations. |
-| `crm/lists` | Web UI skill for managing CRM Lists. This CLI skill can add records to lists via `objects-bulk-import` or the relationship commands. |
-| `crm/tasks` | Web UI skill for CRM Tasks. This CLI skill accesses the `crm_tasks` object type via `superagi crm objects`. |
+| `crm/records.md` | Web UI skill for creating, editing, deleting, and searching Contacts, Leads, Companies, and Deals. Use this CLI skill for bulk operations or automation; use `crm/records.md` for UI-based operations. |
+| `crm/lists.md` | Web UI skill for managing CRM Lists. This CLI skill can add records to lists via `objects-bulk-import` or the relationship commands. |
+| `crm/tasks.md` | Web UI skill for CRM Tasks. This CLI skill accesses the `crm_tasks` object type via `superagi crm objects`. |
 | `prospect` | Prospects saved via "Add to Leads" land in CRM as Lead records — accessible via `superagi crm objects list-objects-records-db-count leads`. |
 | `sequences` | Contacts enrolled in Sequences are CRM records. Use this CLI skill to query and filter them. |
 | `workflows` | Workflow nodes (Create Entity, Update Entity, Add to List) write to the same CRM data this CLI skill reads and writes. |

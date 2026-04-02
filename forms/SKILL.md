@@ -16,7 +16,7 @@ Forms is a standalone service in SuperAGI that manages form definitions, version
 |-------|-------------|
 | `workflows` | Form nodes in Workflows embed published forms. The `form_submitted` and `routing_form_submitted` events can trigger workflows. Use `workflows` to configure those automations. |
 | `process-design` | Form nodes are the primary node type in Process Flows. Use `process-design` to build step-by-step data collection pipelines using forms. |
-| `crm/records` | Forms are bound to CRM entity types (`lead`, `contact`, `company`, `deal`). Pass the correct `entity_type` and `entity_id` when opening a form in EDIT or VIEW mode. |
+| `crm/records.md` | Forms are bound to CRM entity types (`lead`, `contact`, `company`, `deal`). Pass the correct `entity_type` and `entity_id` when opening a form in EDIT or VIEW mode. |
 
 ---
 
