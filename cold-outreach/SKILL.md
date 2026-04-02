@@ -11,6 +11,18 @@ Cold Outreach is SuperAGI's AI SDR (Sales Development Representative). It automa
 **Direct URL:** `https://sales.superagi.com/cold-outreach`
 **Sidebar path:** Engage → Cold Outreach
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach/setup.md` | First-time setup — workspace, app install, mailbox and LinkedIn connection. Must be done before campaigns can be created. |
+| `cold-outreach/find-new-leads.md` | Step-by-step wizard for the "Find New Leads" campaign type — ICP filters, value prop, sender config, outreach approval, and automation settings. |
+| `sequences` | Alternative outreach method. Cold Outreach is AI-driven and volume-oriented; Sequences are manual and step-by-step. Use Sequences for more granular control. |
+| `crm/records.md` | Enriched leads from campaigns land in CRM as Lead records. Use `crm/records.md` to view, edit, or take action on them. |
+| `crm/lists.md` | The "Select a list" campaign type uses CRM Lists as the lead source. Use `crm/lists.md` to create and manage those lists. |
+| `prospect` | ICP filters in Cold Outreach campaigns mirror the filters available in Prospect Leads. Use `prospect` to understand filter options or manually prospect first. |
+| `workflows` | Cold Outreach trigger events (`form_submitted`, `email_replied`, `email_clicked`) can be used as workflow triggers in `workflows`. |
+
 ## Cold Outreach List Page (`/cold-outreach`)
 
 The page has two top-level tabs:

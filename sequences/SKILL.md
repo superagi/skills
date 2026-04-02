@@ -11,6 +11,17 @@ Sequences are manually-built, multi-channel outreach workflows with granular con
 **Direct URL:** `https://sales.superagi.com/sequences`
 **Sidebar path:** Engage > Sequences
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach` | Alternative outreach method. Cold Outreach is AI-driven and auto-sources leads; Sequences require you to build steps and add contacts manually. Choose based on level of control needed. |
+| `crm/records.md` | Leads and Contacts are added to Sequences from CRM records. Manual step tasks (Phone Call, Email) also associate with CRM records. Use `crm/records.md` to look up or create those records. |
+| `crm/lists.md` | The "Select a list" option when adding contacts uses CRM Lists. Use `crm/lists.md` to manage those lists. |
+| `crm/tasks.md` | Manual step types (Manual Email Task, Manual Phone Call Task, etc.) create CRM Tasks. Use `crm/tasks.md` to view and complete those tasks. |
+| `workflows` | The "Add to Sequence" and "Remove from Sequence" workflow nodes enroll contacts automatically. Use `workflows` to trigger sequence enrollment based on CRM events. |
+| `prospect` | Prospects found in Prospect Leads can be added directly to a Sequence via "Add to Sequence". Use `prospect` to find and filter those prospects first. |
+
 ## Sequences List Page (`/sequences`)
 
 **Left sidebar:** Folder system for organizing sequences. "All Sequences" is the default. Custom folders can be created (add_icon) or deleted (delete_icon).
@@ -23,6 +34,14 @@ Sequences are manually-built, multi-channel outreach workflows with granular con
 - **Status** dropdown — filter by sequence status
 - **Created Date** dropdown — filter by creation date
 - **Tags** dropdown — filter by tags
+
+### Filters Behaviour
+
+- **Status filter:** Exactly three options — **Active**, **Inactive**, **Complete**. Use the trash/delete icon to clear the active filter.
+- **Tags filter:** Shows a search box + list of tags. Filters in real time. A tag with no matching sequences shows empty state (no crash).
+- **Created Date filter:** Selecting a future date range shows empty state (no crash).
+- **Search box:** Filters list in real time. Special characters like `@#$%&*` show empty state without crashing.
+- **Named tabs:** Click a named tab to filter to that folder. Click **All Sequences** to show all.
 
 **Sequence table columns:**
 | Column | Description |
@@ -60,6 +79,12 @@ Click "Create Sequence". A modal appears with:
 - **Who can access** — dropdown (e.g., "Team can view and edit")
 - **Tags** — "Add tags to organize your Sequence" (multi-tag input)
 - **Continue** button (disabled until name is entered)
+
+**Validation rules:**
+- Sequence Name cannot be empty — clicking Continue shows a validation error
+- Sequence Name with only spaces is rejected
+- Very long names (300+ characters) — input truncated or error shown; no crash
+- Clicking **×** closes the modal without creating any sequence
 
 ### Path A: Build from Scratch
 
@@ -197,7 +222,14 @@ Split-pane layout with Cancel and "Save & Continue" buttons.
   - **AI Personalize** — AI-powered personalization of the email
   - **Personalize** — insert personalization tokens (First Name, Last Name, Full Name, Current Company, etc.)
 
-**Right pane — Preview:** Same structure as AI Email Agent preview.
+**Right pane — Preview:**
+- **Select Contact/Lead** dropdown — choose a contact to preview the email with their actual data substituted for variables
+- Preview shows the To: field with real email and all `{{variables}}` replaced with real values
+
+**Validation:**
+- Subject cannot be empty — shows "Subject is required" error
+- Body cannot be empty — shows "Message body is required" error
+- **Cancel** — closes the editor without saving; no step is added
 
 ### Step Timing
 
@@ -216,15 +248,100 @@ Each step supports up to 4 variants (A, B, C, D) for A/B testing:
 - Stats are tracked per variant (Sent, Open, Clicks, Replies)
 - Toggle switches control which variants are active
 
-## Adding Contacts to a Sequence
+## Contacts/Leads Tab
 
-Click "Add Contacts/Leads" dropdown button in the header. Three methods:
+### Table Columns
 
-| Method | Description |
+| Column | Description |
 |--------|-------------|
-| **Prospect** | Search and add individual prospects from the CRM |
-| **Select a list** | Choose an existing contact list from your CRM |
-| **Select Manually** | Manually select specific contacts |
+| **Name** | Contact name with avatar |
+| **Current Company** | Contact's company |
+| **Current Role** | Contact's job title |
+| **Current Step** | Which step the contact is on (e.g., Step 1) |
+| **Status** | Status badge (e.g., Completed, Active) |
+| **Sender** | Sender assigned to this contact, with avatar |
+
+### Add Contacts/Leads
+
+Click the **Add Contacts/Leads** button (top-right of the Contacts/Leads tab). A dropdown opens with three options:
+
+| Option | Description |
+|--------|-------------|
+| **Prospect** | Search and select from prospects in the system |
+| **Select a list** | Choose an existing contact list — all contacts from the list are added |
+| **Select manually** | Search and select specific contacts by name or email |
+
+> **Note:** Adding a contact already in the sequence either shows a warning or silently skips the duplicate. The contact will not appear twice.
+
+### Filters
+
+- **Sequence Step** — shows only contacts on the selected step
+- **Status** — shows only contacts with the selected status
+- **Search contacts/leads** (top-right) — filters in real time; non-matching term shows empty state (no crash)
+- **Header checkbox** — selects all visible contact rows
+- **⋮ (three-dot) menu** on each row — shows actions like Remove from sequence, View contact
+
+## Emails Tab
+
+### Table Columns
+
+| Column | Description |
+|--------|-------------|
+| **Sent To** | Recipient name with avatar |
+| **Email** | Subject line + preview of email body |
+| **Engagement** | Icons showing open/click/reply status |
+| **Sender** | Sender name with avatar |
+| **Sent On** | Date and time the email was sent |
+
+### Filters
+
+- **Senders Email** — filter by which sender account sent the email
+- **Sent On** — filter by date or date range
+- **Email Stage** — filter by the stage of the email in the sequence
+- **Opened** — filter by whether the email was opened
+
+> **Empty State:** If no emails have been sent yet, the tab shows an empty state (no blank white screen or error).
+
+## LinkedIn Tab
+
+### Filters
+
+| Filter | Description |
+|--------|-------------|
+| **Sender Account** | Filter by which LinkedIn account sent the activity |
+| **Sent On** | Filter by date |
+| **Connection Request** | Filter by connection request activities |
+| **Message** | Filter by message activities |
+| **InMail** | Filter by InMail activities |
+
+## Analytics Tab
+
+### Top Metric Cards (Last 30 days)
+Total people, Total contacts, Total leads.
+
+### Email Section Metrics (Last 30 days)
+Emails sent, Email opens, Email clicks, Emails replied, Positive replies, Out of office replies, Skipped, Percentage of bounced emails, Open rate, Click rate, Reply rate.
+
+### Email Charts
+- **Email engagement activity** — line chart with color-coded lines for Emails Sent, Email Opens, Email Clicks, Emails Replied, and Bounces
+- **Email Funnel** — bar chart shown below the activity chart
+
+### LinkedIn Section Metrics (Last 30 days)
+Connections sent, Connections accepted, InMails Sent, Messages Sent, InMail Replies, Message Replies, Skipped, Connection acceptance rate, Reply rate.
+
+> If no LinkedIn activity exists, the chart shows "No LinkedIn activity data found!" and all metrics show 0.
+
+### Tasks Section Metrics (Last 30 days)
+Total tasks, Tasks done, Tasks pending.
+
+### Filters
+- **User** — shows metrics for the selected user only
+- **Date** — shows metrics for the selected date range
+- **Reset** — clears all filters and resets to default (all users, last 30 days)
+
+> If the sequence has no activity, all metric cards show 0 and charts show empty or flat lines (no errors or crashes).
+
+---
 
 ## Settings Tab
 
@@ -239,21 +356,87 @@ Click "Add Contacts/Leads" dropdown button in the header. Three methods:
 - **Start Time** — dropdown (e.g., "9:00am")
 - **End Time** — dropdown (e.g., "5:30pm")
 
-### Additional Settings (toggle switches)
+### Schedule
 
-The Settings tab contains multiple toggle switches for advanced configuration including:
-- **Execution rules** — control how steps execute
-- **Lead handling** — rules for managing leads in the sequence
-- **Fallback options** — what happens when a step can't execute
-- **Duplicate prevention** — prevent contacts from being added to the same sequence twice
-- **Timing behavior** — additional timing controls beyond the schedule
+- **Active Days** — configured days shown as removable chips (e.g., Monday ×, Tuesday ×) — click × to remove a day
+- **Tags** — add or remove tags associated with this sequence
+- **Validation:** Setting Start Time later than End Time shows a validation error ("Start time must be before end time"). The setting is not saved.
 
-## Launch Validation
+### Sequence Rules (Toggle Switches)
 
-Clicking "Launch" validates the sequence before activation. Known validations:
-- **Active variants required** — all steps must have at least one active variant. Error toast: "Steps 1, 2, 3 have no active variant"
-- **Sender settings** — email steps require connected mailboxes; LinkedIn steps require connected LinkedIn account
-- **Contacts** — sequence should have contacts added (or they can be added after launch)
+| Rule | Default |
+|------|---------|
+| Mark contact as finished when there is a reply | **ON** |
+| Mark contact as finished when a phone call is connected | OFF |
+| Mark contact as finished if a meeting is booked | OFF |
+| Enrich phone numbers | OFF |
+| Continue to next step if current step is skipped | OFF |
+| Do not add contacts if added to any other sequence | OFF |
+| Exclude people from lists | OFF |
+
+> Enabling "Do not add contacts if added to any other Sequence" prevents duplicate enrollment — system shows a warning or silently skips that contact.
+
+### Distribution (Toggle Switches)
+
+| Toggle | Description |
+|--------|-------------|
+| **Assign phone call to team members via round robin** | Distributes phone call tasks evenly across team members |
+| **Add unsubscribe link to Sequence** | Adds an unsubscribe link to the bottom of each email |
+| **Exclude Catch-All Emails** | Skips sending to catch-all email addresses |
+| **Skip Email Validation** | Bypasses email validation when adding contacts |
+
+## Launch Sequence
+
+The **Launch** button is at the top-right of the sequence detail page.
+
+### Pre-conditions to Launch
+
+- At least one step must be added in the Overview tab
+- At least one contact/lead must be added in the Contacts/Leads tab
+- A sender email account must be connected (Settings → Personal Mailboxes)
+
+| Scenario | Error shown |
+|----------|-------------|
+| No steps added | Launch button is disabled/greyed out |
+| No contacts added | Warning: "Add at least one contact/lead to launch" — sequence does not launch |
+| No sender email configured | Error: "No sender email configured" — sequence does not launch |
+| Steps exist but all variants disabled | Error toast: "Steps 1, 2, 3 have no active variant" |
+
+### On Successful Launch
+
+- The sequence status changes to **Active** in the Sequences list
+- Contacts begin moving through the sequence steps
+- A success notification or confirmation is shown
+
+## Status Control
+
+| Status | Badge Color |
+|--------|-------------|
+| Active | Green |
+| Inactive | Grey |
+
+Clicking the status button opens a dropdown with available state-change options. The badge updates immediately.
+
+---
+
+## Edge Cases & Validation Summary
+
+| Scenario | Expected Behaviour |
+|----------|--------------------|
+| Sequence name is empty | Validation error — sequence not created |
+| Sequence name is only spaces | Validation error — sequence not created |
+| Sequence name is 300+ characters | Input truncated or clear error shown — no crash |
+| Sequence name has special characters | Created with special name OR clear validation message |
+| Duplicate sequence name | Either allowed (both exist) OR warning shown |
+| Search with no matching results | Empty state shown — no crash |
+| Tags filter with no matching sequences | Empty state shown — no crash |
+| Future date range in Created Date filter | Empty state shown — no crash |
+| Search with special characters (@#$%&*) | Empty state shown — no crash |
+| Launch with no steps | Launch button disabled |
+| Launch with no contacts | Warning shown — sequence does not launch |
+| Launch with no sender email | Error shown — sequence does not launch |
+| Start Time later than End Time in Settings | Validation error — setting not saved |
+| Adding a duplicate contact | Warning shown or silently skipped — contact does not appear twice |
 
 ## URL Patterns
 

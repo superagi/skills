@@ -1,0 +1,90 @@
+---
+name: cold-outreach-setup
+description: Initial setup for Cold Outreach in SuperAGI Sales — create workspace, install apps, connect personal mailbox and LinkedIn account
+platform: [linux, macos]
+---
+
+# SuperAGI Cold Outreach — Initial Setup
+
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach` | The main Cold Outreach skill covering the campaign list page, reply management, and campaign detail. Complete setup here first, then use `cold-outreach` to manage campaigns. |
+| `cold-outreach-find-new-leads` | Once setup is done, use this skill to create a "Find New Leads" campaign through the 5-step wizard. |
+| `sequences` | Sequences also require a connected mailbox (same Settings → Personal Mailboxes). Setup done here applies to both Cold Outreach and Sequences. |
+
+---
+
+Before creating campaigns, you need a workspace with the CRM and Cold Outreach apps installed, a connected mailbox, and (optionally) a LinkedIn account.
+
+**Base URL:** `https://sales.superagi.com`
+
+---
+
+## Step 1 — Create a New Workspace
+
+1. Go to `https://sales.superagi.com` and log in
+2. Click on the **workspace selector** (top-left corner)
+3. Select **Create New Workspace**
+4. Enter a workspace name (e.g., `"my-outreach-workspace"`) and confirm
+5. You will be redirected into the new workspace automatically
+
+---
+
+## Step 2 — Install Apps (CRM + Cold Outreach)
+
+Both apps must be installed before they appear in the sidebar.
+
+1. From the left sidebar, click **Settings → Install Apps**
+2. Search for **CRM** and click **Install**
+3. Search for **Cold Outreach** and click **Install**
+4. Wait for both apps to finish installing — they will appear in the left sidebar under the **Engage** section
+
+---
+
+## Step 3 — Add Personal Mailbox
+
+A connected mailbox is required before you can send campaigns. At least one mailbox must be connected.
+
+1. From the left sidebar, go to **Settings**
+2. Under the **Personal** section in the left panel, click **Personal Mailboxes**
+3. Click **Add Mailbox** (top-right button)
+4. Choose your email provider (e.g., Gmail, Outlook)
+5. Follow the OAuth or SMTP setup flow to authenticate and connect your mailbox
+6. Once connected, the mailbox will appear in your mailbox list and be available for campaign sending in **Sender Details**
+
+---
+
+## Step 4 — Add Personal LinkedIn
+
+*Only required if your campaigns include LinkedIn outreach steps (connection requests, messages, InMails).*
+
+1. From the left sidebar, go to **Settings**
+2. Under the **Personal** section in the left panel, click **Personal LinkedIn**
+3. Click **Add LinkedIn Account**
+4. Enter your LinkedIn credentials or connect via the LinkedIn OAuth flow
+5. Once connected, your LinkedIn account will be available for LinkedIn outreach steps in campaigns
+
+---
+
+## Setup Verification Checklist
+
+Before creating your first campaign, confirm:
+- [ ] Workspace is created and you are inside it
+- [ ] CRM app is installed (visible in sidebar)
+- [ ] Cold Outreach app is installed (visible under Engage in sidebar)
+- [ ] At least one mailbox is connected (Settings → Personal Mailboxes)
+- [ ] LinkedIn account is connected if you plan LinkedIn steps (Settings → Personal LinkedIn)
+
+---
+
+## Key Gotchas
+
+1. **Mailbox is required before Sender Details** — if no mailbox is connected, the Sender Details step in the campaign wizard will have nothing to select. Connect at least one mailbox before creating a campaign.
+
+2. **Apps must be installed per workspace** — installing CRM and Cold Outreach in one workspace does not install them in another. Repeat the install steps for each new workspace.
+
+3. **Mailbox Rotation requires multiple mailboxes** — the Mailbox Rotation toggle in Sender Details only works if you have more than one connected mailbox. Add additional mailboxes via Settings → Personal Mailboxes.
+
+4. **LinkedIn is optional until you need it** — campaigns that only use email steps work without LinkedIn. Only add LinkedIn if your campaign wizard includes LinkedIn connection, message, or InMail steps.
