@@ -1,0 +1,161 @@
+---
+name: marketing-whatsapp-campaign
+description: Create and launch WhatsApp marketing campaigns in SuperAGI — covers app installation, campaign creation, recipient selection, template configuration, variable setup, and launch
+platform: [linux, macos]
+---
+
+# SuperAGI Marketing — WhatsApp Campaign
+
+WhatsApp Campaigns allow users to send bulk messages to selected recipient lists using approved WhatsApp templates. This is part of the Marketing module and requires both the **Campaign** and **WhatsApp** apps to be installed.
+
+**Sidebar path:** Marketing → Campaign
+**URL:** `https://sales.superagi.com/marketing/campaigns`
+
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `crm/lists.md` | Recipient lists for WhatsApp campaigns are CRM Lists. Use `crm/lists.md` to create and manage the contact/lead lists used as campaign recipients. |
+| `crm/records.md` | Individual contacts and leads in CRM are the recipients. Use `crm/records.md` to view or manage the records inside those lists. |
+| `cold-outreach` | Alternative bulk outreach via email/LinkedIn. Use `cold-outreach` for AI-driven multi-step email campaigns; use this skill for one-shot WhatsApp bulk messaging. |
+| `sequences` | Sequences support Automatic WhatsApp Message steps for sequential outreach. Use this skill for bulk one-time blasts; use `sequences` for multi-step drip flows. |
+| `workflows` | The WhatsApp workflow node can send WhatsApp messages as part of an automation. Use `workflows` to trigger WhatsApp messages based on CRM events instead of manual campaign launches. |
+
+---
+
+## Step 1 — Install Required Apps
+
+Before creating a WhatsApp campaign, both the Campaign and WhatsApp apps must be installed.
+
+1. Log in to SuperAGI — you are redirected to the Dashboard
+2. In the left sidebar, scroll down to the bottom and click **Add Apps**
+3. You are redirected to the Apps Store
+
+### Install Campaign App (Marketing Module)
+
+4. Scroll to the **Marketing** section
+5. Locate **Campaign**
+6. If the button shows **Install** — click it to install
+7. If the button shows **Open** — it is already installed, skip
+
+### Install WhatsApp App (Channels)
+
+8. Scroll to the **Channels** section
+9. Locate **WhatsApp**
+10. If the button shows **Install** — click it to install
+11. If the button shows **Open** — it is already installed, skip
+
+12. Click **Back to SuperAGI** (top of the Apps Store page) to return to the Dashboard
+
+---
+
+## Step 2 — Navigate to Campaign Module
+
+1. From the Dashboard, look at the left sidebar
+2. Scroll to **Marketing** and click it
+3. Click **Campaign**
+4. You land on the **Campaign Listing Page** (`/marketing/campaigns`)
+
+---
+
+## Step 3 — Create a New Campaign
+
+1. On the Campaign Listing Page, click **Create Campaign** (top-right corner)
+2. You are redirected to the **Select a Campaign Channel** page
+
+---
+
+## Step 4 — Select WhatsApp Channel
+
+Three channel options are displayed:
+- Email
+- SMS
+- **WhatsApp** (3rd option)
+
+1. Click **WhatsApp**
+2. Click **Create Campaign**
+3. You are redirected to the WhatsApp Campaign Configuration page
+
+---
+
+## Step 5 — Configure the Campaign
+
+### Recipients (Send To)
+
+1. Click the **Send To** input box
+2. Type the list name (e.g., `"temp_list"`)
+3. Select the matching list from the dropdown suggestions
+
+> Only existing CRM Lists appear in the dropdown. Create the list first via `crm/lists.md` if it does not exist.
+
+### WhatsApp Config
+
+1. Click the **"Select a WhatsApp config"** dropdown
+2. Select the configured WhatsApp number (e.g., `"15558871557"`)
+
+> Only numbers that have been configured in WhatsApp settings appear here.
+
+### Message Template
+
+1. Click the **"Select a template"** dropdown
+2. Type a template name to search (e.g., `"text_template"`)
+3. Select the template from the dropdown
+
+> Only pre-approved WhatsApp templates are available. Unapproved templates do not appear.
+
+### Add Variable (Dynamic Personalisation)
+
+If the selected template supports variables:
+
+1. Inside the template preview, click **Add Variable**
+2. A popup appears
+3. Click **"Select a variable"** dropdown — choose a variable (e.g., `"First Name"`)
+4. Enter a **fallback value** in the fallback field (e.g., `"atish"`) — this is used when the variable has no value for a recipient
+5. Click confirm/save in the popup
+
+> Always provide a fallback value. If a recipient's first name is missing and no fallback is set, the message may fail or send with a blank field.
+
+---
+
+## Step 6 — Launch Campaign
+
+1. Click **Launch Campaign** (top-right corner)
+2. A popup appears with send options:
+   - **Send Now** — sends immediately
+   - **Schedule** — sends at a specified time
+3. Select **Send Now**
+4. Click **Send Campaign**
+
+> The campaign is **NOT sent** when you click "Launch Campaign" — it is only sent after you click **"Send Campaign"** in the popup.
+
+---
+
+## End-to-End Workflow Summary
+
+```
+1. INSTALL    → Apps Store → Install Campaign + WhatsApp apps
+2. NAVIGATE   → Dashboard → Marketing → Campaign
+3. CREATE     → Click "Create Campaign" → Select WhatsApp channel
+4. RECIPIENTS → Send To field → select CRM list from dropdown
+5. CONFIG     → Select WhatsApp number → select approved template
+6. VARIABLES  → Add Variable → pick field → set fallback value
+7. LAUNCH     → Click "Launch Campaign" → Send Now → Send Campaign
+```
+
+---
+
+## Key Gotchas
+
+1. **Install vs Open button** — "Install" means the app is not yet installed; "Open" means it is already installed. Do not click "Install" on an already-installed app.
+
+2. **Recipient list must exist first** — the Send To dropdown only shows existing CRM Lists. If the list is not there, navigate to `crm/lists.md` to create it before returning here.
+
+3. **Only configured WhatsApp numbers appear** — the WhatsApp Config dropdown is empty if no number has been configured in Settings → WhatsApp. Set up the number in settings first.
+
+4. **Only approved templates are usable** — unapproved or pending WhatsApp templates do not appear in the template dropdown. Templates must be approved by WhatsApp before they can be used.
+
+5. **Always set a fallback for variables** — if a variable (e.g., First Name) is missing for any recipient and no fallback is provided, the message may fail or send with an empty placeholder.
+
+6. **Campaign is not sent until "Send Campaign" is clicked** — clicking "Launch Campaign" only opens the send options popup. The actual send happens only after selecting Send Now and clicking **Send Campaign**.
+
+7. **"Back to SuperAGI" after app install** — after installing apps in the Apps Store, use the **Back to SuperAGI** button at the top to return to the dashboard. Do not use the browser back button.

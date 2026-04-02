@@ -17,6 +17,10 @@ A collection of reusable **Agent Skills** for SuperAGI platform.
   - [`crm/lists.md`](./crm/lists.md) — create, manage, filter, and export CRM Lists
   - [`crm/tasks.md`](./crm/tasks.md) — create and manage CRM Tasks, log calls/meetings/notes
 
+### Marketing
+- [`marketing/`](./marketing/) — marketing campaigns
+  - [`marketing/whatsapp-campaign.md`](./marketing/whatsapp-campaign.md) — create and launch WhatsApp bulk campaigns
+
 ### Automation
 - [`workflows/`](./workflows/) — visual automation builder: 30+ node types, triggers, canvas, lifecycle
 - [`process-design/`](./process-design/) — simplified process flows for CRM data collection and routing
