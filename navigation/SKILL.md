@@ -8,6 +8,26 @@ platform: [linux, macos]
 
 SuperAGI Sales (`sales.superagi.com`) is an AI-native sales platform. The UI uses a left sidebar for navigation, a top header bar with search/notifications/avatar, and a main content area.
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `crm/records.md` | CRM section in sidebar — Contacts, Leads, Companies, Deals at `/crm/*` URLs. |
+| `crm/lists.md` | CRM Lists at `/list` in sidebar under CRM section. |
+| `crm/tasks.md` | CRM Tasks at `/tasks` in sidebar under CRM section. |
+| `crm/SKILL.md` | CLI access to the same CRM data navigated via the sidebar. |
+| `prospect` | Prospect section in sidebar — Prospect Leads, Companies, Signals, Website Visitors at `/prospect/*`. |
+| `cold-outreach/SKILL.md` | Engage section in sidebar — Cold Outreach at `/cold-outreach`. |
+| `sequences` | Engage section in sidebar — Sequences at `/sequences`. |
+| `workflows` | Automate section in sidebar — Workflows at `/workflows`. |
+| `process-design` | Process flows accessible via sidebar under Automate. |
+| `forms` | Forms accessible via sidebar under Library or embedded in workflow/process editors. |
+| `marketing/whatsapp-campaign.md` | Marketing section in sidebar — Campaigns at `/marketing/campaigns`. |
+| `meeting-links` | Meeting Links section in sidebar — Meeting Agents at `/meeting_agent`, Meeting Logs at `/meeting_log`. |
+| `ai-analytics` | Analyze section in sidebar — AI Analytics at `/analytics`. |
+| `settings` | Settings accessed via avatar (top-right) → Settings, or directly at `/settings`. |
+| `chats` | Chat CLI for interacting with the platform programmatically without the sidebar UI. |
+
 ---
 
 ## 1. Complete URL Map

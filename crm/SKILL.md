@@ -10,13 +10,19 @@ platform: [linux, macos]
 
 | Skill | Relationship |
 |-------|-------------|
-| `crm/records.md` | Web UI skill for creating, editing, deleting, and searching Contacts, Leads, Companies, and Deals. Use this CLI skill for bulk operations or automation; use `crm/records.md` for UI-based operations. |
-| `crm/lists.md` | Web UI skill for managing CRM Lists. This CLI skill can add records to lists via `objects-bulk-import` or the relationship commands. |
+| `crm/records.md` | Web UI skill for creating, editing, deleting, and searching Contacts, Leads, Companies, and Deals. Use this CLI skill for bulk operations; use `crm/records.md` for UI-based operations. |
+| `crm/lists.md` | Web UI skill for managing CRM Lists. This CLI skill can add records to lists via `objects-bulk-import` or relationship commands. |
 | `crm/tasks.md` | Web UI skill for CRM Tasks. This CLI skill accesses the `crm_tasks` object type via `superagi crm objects`. |
 | `prospect` | Prospects saved via "Add to Leads" land in CRM as Lead records — accessible via `superagi crm objects list-objects-records-db-count leads`. |
-| `sequences` | Contacts enrolled in Sequences are CRM records. Use this CLI skill to query and filter them. |
+| `sequences` | Contacts enrolled in Sequences are CRM records. Use this CLI skill to query and filter them programmatically. |
+| `cold-outreach/SKILL.md` | Leads enriched by Cold Outreach campaigns land in CRM. Use this CLI skill to bulk query or export those leads. |
 | `workflows` | Workflow nodes (Create Entity, Update Entity, Add to List) write to the same CRM data this CLI skill reads and writes. |
-| `forms` | Form submissions are bound to CRM entity types (`entity_type`, `entity_id`). Use this CLI skill to retrieve the entity records associated with form submissions. |
+| `forms` | Form submissions are bound to CRM entity types (`entity_type`, `entity_id`). Use this CLI skill to retrieve entity records associated with form submissions. |
+| `meeting-links` | Meeting log associations link meetings to CRM records. Use this CLI skill to query the linked contacts, leads, companies, and deals. |
+| `ai-analytics` | CRM data queried via this CLI skill is the same data powering analytics dashboards. |
+| `marketing/whatsapp-campaign.md` | WhatsApp campaign recipients come from CRM lists. Use this CLI skill to manage those lists and records programmatically. |
+| `settings` | API keys needed for CLI auth are generated at Settings → API Keys (`/settings#api_keys`). |
+| `chats` | Same CLI binary (`superagi`) covers both CRM (`superagi crm`) and Chat (`superagi chat`) commands. |
 
 ## Install & Auth
 

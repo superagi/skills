@@ -16,7 +16,12 @@ Forms is a standalone service in SuperAGI that manages form definitions, version
 |-------|-------------|
 | `workflows` | Form nodes in Workflows embed published forms. The `form_submitted` and `routing_form_submitted` events can trigger workflows. Use `workflows` to configure those automations. |
 | `process-design` | Form nodes are the primary node type in Process Flows. Use `process-design` to build step-by-step data collection pipelines using forms. |
-| `crm/records.md` | Forms are bound to CRM entity types (`lead`, `contact`, `company`, `deal`). Pass the correct `entity_type` and `entity_id` when opening a form in EDIT or VIEW mode. |
+| `crm/records.md` | Forms are bound to CRM entity types (`lead`, `contact`, `company`, `deal`). Pass `entity_type` and `entity_id` when opening a form in EDIT or VIEW mode against a record. |
+| `crm/SKILL.md` | Use the CRM CLI to retrieve entity records (`entity_type`, `entity_id`) associated with form submissions for bulk processing. |
+| `meeting-links` | Meeting log detail pages show linked forms under the Associations panel — forms submitted in the context of a meeting appear there. |
+| `ai-analytics` | Form submission data can be queried and analyzed via the SQL dashboard type in AI Analytics. |
+| `cold-outreach/find-new-leads.md` | Cold Outreach landing pages and CTAs can link to forms for lead capture; `form_submitted` is a valid Cold Outreach trigger event. |
+| `sequences` | Form submission events (`form_submitted`) can be used to trigger sequence enrollment automatically via workflows. |
 
 ---
 

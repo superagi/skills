@@ -15,9 +15,14 @@ Process Design (Process Flows) is a simplified variant of the Workflows/Automati
 | Skill | Relationship |
 |-------|-------------|
 | `workflows` | Full Automations system — use `workflows` when you need AI agents, email/WhatsApp engagement, prospecting, or 30+ node types not available in Process Design. |
-| `forms` | Form nodes inside Process Flows reference forms from the Forms service. Use `forms` to create, version, and publish the forms before using them in a process flow. |
+| `forms` | Form nodes inside Process Flows reference forms from the Forms service. Use `forms` to create, version, and publish forms before using them in a process flow. |
 | `crm/records.md` | Process flows operate within the context of CRM entities. Trigger events like `create_lead_clicked` and `create_deal_clicked` directly interact with CRM records. |
-| `crm/tasks.md` | Process flows can route to task creation via notifications or CRM integrations. Use `crm/tasks.md` to view and manage tasks created by process flows. |
+| `crm/tasks.md` | Process flows can route to task creation via CRM integrations. Use `crm/tasks.md` to view and manage tasks created by process flows. |
+| `crm/lists.md` | Process flows that collect lead or contact data can route records into CRM Lists for follow-up segmentation. |
+| `crm/SKILL.md` | Use the CRM CLI to query or export records created or updated by process flows. |
+| `sequences` | After a process flow captures lead data, the lead can be enrolled in an outreach sequence for follow-up. |
+| `cold-outreach/SKILL.md` | Process flow form submissions can feed leads into Cold Outreach campaigns. |
+| `ai-analytics` | Process flow outcomes and form submission data can be analyzed in AI Analytics dashboards. |
 
 ---
 

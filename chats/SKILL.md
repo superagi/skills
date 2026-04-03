@@ -36,6 +36,18 @@ One binary, one API key — covers both CRM (`superagi crm`) and Chat (`superagi
 
 ---
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `crm/SKILL.md` | Same CLI binary — `superagi crm` covers CRM operations while `superagi chat` covers messaging. One API key authenticates both. Use `crm/SKILL.md` for all CRM record operations. |
+| `settings` | API Keys (`/settings#api_keys`) are generated in Settings and used as `SUPERAGI_API_KEY` for CLI authentication. |
+| `crm/records.md` | CRM Tasks can be linked to chat messages via `superagi chat messages`. Use `crm/records.md` to view the records those tasks are associated with. |
+| `workflows` | Chat notifications (Slack Notification node, Email Notification node) in Workflows can be used to alert team members about CRM events — `chats` covers the direct messaging side of team communication. |
+| `navigation` | The Chat CLI provides programmatic access to the same team conversations accessible in the SuperAGI web UI. |
+
+---
+
 ## Mental Model
 
 **Chat is SuperAGI's internal team messaging** (like Slack). It's for team communication, not customer-facing.

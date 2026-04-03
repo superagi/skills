@@ -10,12 +10,16 @@ platform: [linux, macos]
 
 | Skill | Relationship |
 |-------|-------------|
-| `cold-outreach-setup` | Must be completed first — workspace, app install, mailbox connection are prerequisites for this wizard. |
-| `cold-outreach` | After launching, use `cold-outreach` to monitor campaign status, view replies, check analytics, and manage the campaign. |
-| `crm-records` | Leads found and enriched by this campaign land in CRM as Lead records. Use `crm-records` to view, edit, or act on them. |
-| `crm-lists` | The "Select a list" campaign type (not covered here) uses CRM Lists as the lead source. Use `crm-lists` to create and manage those lists. |
+| `cold-outreach/setup.md` | Must be completed first — workspace, app install, mailbox and LinkedIn connection are prerequisites for this wizard. |
+| `cold-outreach/SKILL.md` | After launching, use `cold-outreach/SKILL.md` to monitor campaign status, view replies, check analytics, and manage the campaign. |
+| `crm/records.md` | Leads found and enriched by this campaign land in CRM as Lead records. Use `crm/records.md` to view, edit, or act on them. |
+| `crm/lists.md` | The "Select a list" campaign type uses CRM Lists as the lead source. Use `crm/lists.md` to create and manage those lists. |
+| `crm/tasks.md` | Manual follow-up tasks for replied leads can be logged and tracked in CRM Tasks. |
 | `sequences` | Cold Outreach is AI-driven and volume-oriented. For manual, step-by-step multi-channel outreach, use `sequences` instead. |
-| `prospect` | ICP filters in Step 1 mirror the filters in Prospect Leads. Use `prospect` skill to understand available filter options. |
+| `prospect` | ICP filters in Step 1 mirror the filters in Prospect Leads. Use `prospect` to understand available filter options. |
+| `meeting-links` | Meeting Agent booking links can be set as CTA links in Step 2 (Define Value Prop → Call to action → Meeting Agent Link). |
+| `settings` | Value Prop Templates (Settings → Value Prop Templates) can be selected in Step 2 to pre-fill messaging fields. |
+| `workflows` | Cold Outreach trigger events (`email_replied`, `email_clicked`) can kick off follow-up workflows after campaign activity. |
 
 ---
 

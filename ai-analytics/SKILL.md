@@ -16,10 +16,17 @@ AI Analytics is SuperAGI's reporting and visualization module. Users create **Sp
 | Skill | Relationship |
 |-------|-------------|
 | `crm/records.md` | Analytics charts are built from CRM entity data (leads, contacts, companies, deals). Use `crm/records.md` to understand the fields and structure of the underlying data. |
-| `crm/lists.md` | CRM lists can be used as data sources for analytics dashboards. Use `crm/lists.md` to understand list structure. |
-| `crm/tasks.md` | Task data (call logs, meetings, notes) is available as an analytics data source. |
+| `crm/lists.md` | CRM list data can be used as a data source for analytics dashboards and segmentation reporting. |
+| `crm/tasks.md` | Task activity data (calls logged, meetings booked, task completion rates) is available as an analytics data source. |
+| `crm/SKILL.md` | Use the CRM CLI to export raw data for analysis outside of the built-in dashboards. |
 | `workflows` | Workflow execution events and metrics can be referenced in analytics dashboards. |
-| `forms` | Form submission data can be analyzed via the SQL dashboard type. |
+| `forms` | Form submission data can be queried and analyzed via the SQL dashboard type. |
+| `sequences` | Sequence performance metrics (emails sent, open rates, reply rates) are available as analytics data sources. |
+| `cold-outreach/SKILL.md` | Cold Outreach campaign metrics (sent, clicked, replied, bounced) are available in analytics dashboards. |
+| `meeting-links` | Meeting data (bookings, disposition outcomes, talktime) can be analyzed in analytics dashboards. |
+| `marketing/whatsapp-campaign.md` | WhatsApp campaign analytics (reply rates, open rates) are available as analytics data sources. |
+| `prospect` | Prospecting data (new leads over time, lead sources, conversion rates) can be visualized in analytics. |
+| `settings` | API keys for programmatic data access are generated in Settings. Analytics spaces can have Public/Shared/Private visibility tied to workspace membership. |
 
 ---
 
