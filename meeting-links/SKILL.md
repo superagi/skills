@@ -20,9 +20,16 @@ In the left sidebar, scroll down and click **"Meeting Links"** to expand it. Two
 |-------|-------------|
 | `crm/records.md` | Meeting Logs Associations panel links meetings to Contacts, Leads, Companies, and Deals. Use `crm/records.md` to view or manage those records. |
 | `crm/tasks.md` | AI Notetaker auto-creates Tasks from meeting content — visible in the Tasks tab on the meeting detail page. Use `crm/tasks.md` to action those tasks. |
+| `crm/lists.md` | Contacts and leads associated with a meeting can be added to CRM lists for segmented follow-up. |
+| `crm/SKILL.md` | Use the CRM CLI to query records associated with meeting logs or bulk export meeting-linked leads and contacts. |
 | `workflows` | Meeting bookings and calendar events can trigger workflow automations. Use `workflows` to automate follow-up actions after a meeting is booked or completed. |
 | `sequences` | After a meeting, leads can be enrolled into follow-up outreach sequences. Use `sequences` to build those flows. |
-| `cold-outreach` | Meeting Agent booking links can be used as CTA links in Cold Outreach campaign emails. Use `cold-outreach` to configure CTA links in campaign step content. |
+| `cold-outreach/SKILL.md` | Meeting Agent booking links can be used as CTA links in Cold Outreach campaign emails. |
+| `cold-outreach/find-new-leads.md` | Meeting Agent Links are selectable as CTA Link Types in Step 2 (Define Value Prop) of the Find New Leads wizard. |
+| `prospect` | Prospects found via Prospect Leads can be sent meeting booking links to schedule a discovery call. |
+| `ai-analytics` | Meeting data (bookings, talktime, outcomes by disposition) can be analyzed in AI Analytics dashboards. |
+| `settings` | Calendar connection (`/settings#availability`) and Meeting Intelligence (`/settings#meeting_intelligence`) are configured in Settings before Meeting Links can function. |
+| `forms` | Meeting log detail pages show linked forms under the Associations panel. |
 
 ---
 

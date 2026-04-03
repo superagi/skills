@@ -10,11 +10,14 @@ platform: [linux, macos, windows]
 
 | Skill | Relationship |
 |-------|-------------|
-| `crm-records` | Tasks are associated with Contacts, Leads, Companies, and Deals via the Object Hierarchy panel. Use `crm-records` to look up or create those records. |
-| `crm-lists` | Bulk selecting records inside a List → "Add CRM Task" creates tasks for those records in bulk. Use `crm-lists` to manage the list of records first. |
-| `sequences` | Tasks of type "Manual Phone Call Task", "Manual Email Task", etc. in Sequences surface as CRM Tasks. Use `crm-tasks` to action them. |
-| `workflows` | The Workflow "Create Task" node automatically creates CRM Tasks. Use `workflows` to automate task creation based on CRM events. |
-| `crm` | CLI-based access to the `crm_tasks` object type — use for bulk task queries, updates, or automation scripts. |
+| `crm/records.md` | Tasks are associated with Contacts, Leads, Companies, and Deals via the Object Hierarchy panel. Use `crm/records.md` to look up or create those records. |
+| `crm/lists.md` | Bulk selecting records inside a List → "Add CRM Task" creates tasks for those records in bulk. Use `crm/lists.md` to manage the list of records first. |
+| `crm/SKILL.md` | CLI-based access to the `crm_tasks` object type — use for bulk task queries, updates, or automation scripts. |
+| `sequences` | Manual step types in Sequences (Manual Email Task, Manual Phone Call Task) surface as CRM Tasks. Use `crm/tasks.md` to action them. |
+| `workflows` | The "Create Task" workflow node automatically creates CRM Tasks based on CRM events. Use `workflows` to automate task creation. |
+| `meeting-links` | AI Notetaker auto-creates CRM Tasks from meeting content. Those tasks appear here linked to the meeting's associated records. |
+| `process-design` | Process flows can route to task creation via CRM integrations. Tasks created by process flows appear here. |
+| `ai-analytics` | Task activity data (calls logged, meetings booked, task completion) is available as an analytics data source. |
 
 ---
 

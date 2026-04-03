@@ -307,13 +307,18 @@ Click **CRM** in the left sidebar to expand it:
 
 | Skill | Relationship |
 |-------|-------------|
-| `crm-lists` | Records can be added to Lists from the add form (Lists field) or via bulk actions. Use `crm-lists` to create and manage those lists. |
-| `crm-tasks` | CRM Tasks can be associated with any Contact, Lead, Company, or Deal. Navigate to `crm-tasks` to create or view tasks linked to a record. |
-| `crm` | CLI-based skill for the same record types — use for bulk operations, scripting, or API-level access to leads, contacts, companies, deals. |
+| `crm/lists.md` | Records can be added to Lists from the add form or via bulk actions. Use `crm/lists.md` to create and manage those lists. |
+| `crm/tasks.md` | CRM Tasks can be associated with any Contact, Lead, Company, or Deal. Use `crm/tasks.md` to create or view tasks linked to a record. |
+| `crm/SKILL.md` | CLI-based skill for the same record types — use for bulk operations, scripting, or API-level access to leads, contacts, companies, deals. |
 | `prospect` | Prospects found via Prospect Leads/Companies are saved into CRM as Leads or Companies using "Add to Leads" / "Add to Companies". |
-| `sequences` | Leads and Contacts can be added to outreach Sequences directly from the record list or from bulk actions inside a List. |
-| `cold-outreach-find-new-leads` | Cold Outreach campaigns target CRM entity types (leads, contacts). Enriched prospects land in CRM as Lead records. |
-| `workflows` | Workflow nodes (Create Entity, Update Entity) create and update these CRM record types automatically. |
+| `sequences` | Leads and Contacts can be added to outreach Sequences directly from the record list or via bulk actions inside a List. |
+| `cold-outreach/SKILL.md` | Cold Outreach campaigns target CRM leads and contacts. Enriched prospects land in CRM as Lead records after campaigns run. |
+| `cold-outreach/find-new-leads.md` | The "Find New Leads" wizard sources leads that land in CRM. Use this skill to view and act on those lead records. |
+| `workflows` | Workflow nodes (Create Entity, Update Entity) create and update these CRM record types automatically based on events. |
+| `meeting-links` | Meeting Logs Associations panel links meetings to Contacts, Leads, Companies, and Deals stored here. Use `meeting-links` to view those meetings. |
+| `ai-analytics` | CRM entity data (leads, contacts, companies, deals) is the primary data source for analytics charts and dashboards. |
+| `forms` | Forms are bound to CRM entity types — pass `entity_type` and `entity_id` when opening a form in EDIT or VIEW mode against a record. |
+| `marketing/whatsapp-campaign.md` | CRM contacts and leads inside lists are the recipients for WhatsApp bulk campaigns. |
 
 ---
 

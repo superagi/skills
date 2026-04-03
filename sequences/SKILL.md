@@ -15,12 +15,18 @@ Sequences are manually-built, multi-channel outreach workflows with granular con
 
 | Skill | Relationship |
 |-------|-------------|
-| `cold-outreach` | Alternative outreach method. Cold Outreach is AI-driven and auto-sources leads; Sequences require you to build steps and add contacts manually. Choose based on level of control needed. |
-| `crm/records.md` | Leads and Contacts are added to Sequences from CRM records. Manual step tasks (Phone Call, Email) also associate with CRM records. Use `crm/records.md` to look up or create those records. |
+| `cold-outreach/SKILL.md` | Alternative outreach method. Cold Outreach is AI-driven and auto-sources leads; Sequences require you to build steps and add contacts manually. |
+| `cold-outreach/setup.md` | Sequences require a connected mailbox and LinkedIn account — set up via `cold-outreach/setup.md` (same Settings prerequisites). |
+| `crm/records.md` | Leads and Contacts are added to Sequences from CRM records. Manual step tasks also associate with CRM records. Use `crm/records.md` to look up or create those records. |
 | `crm/lists.md` | The "Select a list" option when adding contacts uses CRM Lists. Use `crm/lists.md` to manage those lists. |
 | `crm/tasks.md` | Manual step types (Manual Email Task, Manual Phone Call Task, etc.) create CRM Tasks. Use `crm/tasks.md` to view and complete those tasks. |
-| `workflows` | The "Add to Sequence" and "Remove from Sequence" workflow nodes enroll contacts automatically. Use `workflows` to trigger sequence enrollment based on CRM events. |
+| `crm/SKILL.md` | Use the CRM CLI to bulk query contacts enrolled in sequences or filter sequence-related lead records. |
+| `workflows` | The "Add to Sequence" and "Remove from Sequence" workflow nodes enroll contacts automatically based on CRM events. |
 | `prospect` | Prospects found in Prospect Leads can be added directly to a Sequence via "Add to Sequence". Use `prospect` to find and filter those prospects first. |
+| `meeting-links` | After a meeting is booked, leads can be enrolled in follow-up sequences for post-meeting nurturing. |
+| `marketing/whatsapp-campaign.md` | Sequences support Automatic WhatsApp Message steps for drip flows. Use `marketing/whatsapp-campaign.md` for one-shot bulk blasts instead. |
+| `settings` | Personal Mailboxes and LinkedIn Account in Settings are required before email and LinkedIn steps in sequences can send. |
+| `ai-analytics` | Sequence performance metrics (emails sent, replies, open rates) are available as analytics data sources. |
 
 ## Sequences List Page (`/sequences`)
 

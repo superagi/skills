@@ -10,12 +10,17 @@ platform: [linux, macos]
 
 | Skill | Relationship |
 |-------|-------------|
-| `crm-records` | Records (Contacts, Leads, Companies) are the items inside a list. Use `crm-records` to create/edit/delete the records that populate lists. |
-| `crm-tasks` | Bulk selecting records inside a list allows you to click "Add CRM Task" — creates tasks for those records. Navigate to `crm-tasks` to view/manage those tasks. |
-| `sequences` | Bulk select records in a list → "Add to Sequence" to enroll them in outreach. Use `sequences` skill to build and manage those sequences. |
-| `cold-outreach-find-new-leads` | Saved lists can be used in Cold Outreach via "Select a list" campaign type. Use `cold-outreach-find-new-leads` to configure that campaign. |
-| `prospect` | In Prospect Leads, the "Target Company Domains → Select a list" filter references saved company lists. Use `crm-lists` to create those company lists first. |
-| `workflows` | Workflow nodes (Add to List, Remove from List) automatically manage list membership. Use `workflows` skill to set up those automations. |
+| `crm/records.md` | Records (Contacts, Leads, Companies) are the items inside a list. Use `crm/records.md` to create/edit/delete the records that populate lists. |
+| `crm/tasks.md` | Bulk selecting records inside a list → "Add CRM Task" creates tasks for those records in bulk. Use `crm/tasks.md` to view and manage those tasks. |
+| `crm/SKILL.md` | CLI-based access for bulk list and record operations via `objects-bulk-import` and relationship commands. |
+| `sequences` | Bulk select records in a list → "Add to Sequence" to enroll them in outreach. Use `sequences` to build and manage those sequences. |
+| `cold-outreach/SKILL.md` | Saved lists can be used in Cold Outreach via the "Select a list" campaign type. |
+| `cold-outreach/find-new-leads.md` | The "Find New Leads" wizard can source leads that are then saved back into CRM lists. |
+| `prospect` | In Prospect Leads, the "Target Company Domains → Select a list" filter references saved company lists. Create those lists here first. |
+| `workflows` | Workflow nodes (Add to List, Remove from List) automatically manage list membership based on CRM events. |
+| `marketing/whatsapp-campaign.md` | CRM Lists are used directly as the recipient source ("Send To") in WhatsApp bulk campaigns. |
+| `ai-analytics` | CRM list data can be used as a data source in analytics dashboards for segmentation reporting. |
+| `meeting-links` | Contacts and leads inside lists can be associated with meeting log entries in Meeting Links. |
 
 ---
 

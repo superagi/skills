@@ -19,9 +19,14 @@ Workflows (also called Automations) is SuperAGI's visual automation builder. Use
 | `crm/records.md` | Workflow nodes (Create Entity, Update Entity) create and update CRM records (leads, contacts, companies, deals). Use `crm/records.md` to understand the fields and structure. |
 | `crm/lists.md` | The "Add to List" and "Remove from List" workflow nodes manage CRM list membership. Use `crm/lists.md` to understand list structure. |
 | `crm/tasks.md` | The "Create Task" workflow node creates CRM Tasks. Use `crm/tasks.md` to view and action those tasks. |
+| `crm/SKILL.md` | Workflow nodes write to CRM data that the CLI skill reads. Use `crm/SKILL.md` for programmatic access to records created by workflows. |
 | `sequences` | The "Add to Sequence" / "Remove from Sequence" workflow nodes enroll contacts in sequences. Use `sequences` to build those sequences. |
-| `cold-outreach` | Cold Outreach trigger events (`form_submitted`, `email_replied`) can be used as workflow triggers. Use `cold-outreach` to manage the campaigns. |
+| `cold-outreach/SKILL.md` | Cold Outreach trigger events (`email_replied`, `email_clicked`) can be used as workflow triggers. Use `cold-outreach/SKILL.md` to manage the campaigns. |
 | `prospect` | The "Prospect Leads" and "Prospect Companies" workflow nodes use the same filters as the Prospect module. Use `prospect` to understand filter options. |
+| `meeting-links` | Meeting booking events and calendar events can trigger workflows. Use `meeting-links` to configure the meeting agents. |
+| `marketing/whatsapp-campaign.md` | The WhatsApp workflow node sends WhatsApp messages as part of automations. Use `marketing/whatsapp-campaign.md` for manual one-shot blasts instead. |
+| `ai-analytics` | Workflow execution events and metrics can be referenced in analytics dashboards. |
+| `settings` | Mailbox and LinkedIn connections required for Email and LinkedIn workflow nodes are configured in Settings. |
 
 ---
 

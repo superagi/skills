@@ -6,6 +6,22 @@ platform: [linux, macos]
 
 # SuperAGI Sales CRM — Settings
 
+## Related Skills
+
+| Skill | Relationship |
+|-------|-------------|
+| `cold-outreach/SKILL.md` | Personal Mailboxes (`#personal_mailboxes`) and Personal LinkedIn (`#linkedin_account`) are required before Cold Outreach campaigns can send email or LinkedIn messages. |
+| `cold-outreach/setup.md` | `cold-outreach/setup.md` walks through connecting mailboxes and LinkedIn step by step — the actual configuration lives here in Settings. |
+| `cold-outreach/find-new-leads.md` | Value Prop Templates (`#value_prop_templates`) defined here are selectable in Step 2 of the Find New Leads wizard. |
+| `sequences` | Personal Mailboxes and LinkedIn Account are required before email and LinkedIn steps in sequences can send. |
+| `meeting-links` | Availability (`#availability`) sets the meeting agent schedule. Meeting Intelligence (`#meeting_intelligence`) configures AI notetaker and auto-task creation. |
+| `marketing/whatsapp-campaign.md` | WhatsApp (`#whatsapp`) is where WhatsApp numbers are connected — required before they appear in campaign config. |
+| `crm/SKILL.md` | API Keys (`#api_keys`) are generated here and used as `SUPERAGI_API_KEY` for CLI authentication. |
+| `chats` | API Keys (`#api_keys`) are also used to authenticate the Chat CLI (`superagi chat`). |
+| `ai-analytics` | Analytics space visibility (Public/Shared/Private) is tied to workspace membership managed via Settings. |
+| `workflows` | Email Templates (`#email_templates`) and Value Prop Templates (`#value_prop_templates`) configured here are referenced in workflow email nodes. |
+| `navigation` | Settings is accessed via the avatar menu (top-right) — see `navigation` for the full URL map. |
+
 ## How to Access
 - URL: `https://sales.superagi.com/settings` (lands on `#general` by default)
 - Or click the "AK" user avatar (top-right) → Settings

@@ -13,10 +13,16 @@ Prospecting is how you find potential customers from SuperAGI's external databas
 | Skill | Relationship |
 |-------|-------------|
 | `crm/records.md` | "Add to Leads" and "Add to Companies" save prospects directly into CRM as Lead or Company records. Use `crm/records.md` to view, edit, or act on them after saving. |
-| `crm/lists.md` | "Add to List" saves prospects into a named CRM List. The "Target Company Domains → Select a list" filter in Prospect Leads reads from saved company lists. Use `crm/lists.md` to manage those lists. |
+| `crm/lists.md` | "Add to List" saves prospects into a named CRM List. The "Target Company Domains → Select a list" filter in Prospect Leads reads from saved company lists. |
+| `crm/tasks.md` | After saving prospects to CRM, create follow-up tasks against those records using `crm/tasks.md`. |
+| `crm/SKILL.md` | Use the CRM CLI to bulk query or export the Lead and Company records created from prospecting. |
 | `sequences` | "Add to Sequence" from Prospect Leads drops leads directly into an outreach sequence. Use `sequences` to build those sequences first. |
-| `cold-outreach/find-new-leads.md` | The ICP filters in Cold Outreach Step 1 mirror the Prospect Leads filter panel. Use `prospect` to manually validate which filters return the right leads before configuring a Cold Outreach campaign. |
+| `cold-outreach/SKILL.md` | Cold Outreach auto-sources leads using the same ICP filters. Use `prospect` to manually validate filter results before configuring a Cold Outreach campaign. |
+| `cold-outreach/find-new-leads.md` | ICP filters in Cold Outreach Step 1 mirror the Prospect Leads filter panel. Validate filters here first before configuring a campaign. |
 | `workflows` | The "Prospect Leads" and "Prospect Companies" workflow nodes use the same filter criteria as this skill. Use `workflows` to automate prospect sourcing. |
+| `meeting-links` | Prospects saved as leads can be sent meeting booking links to schedule a call directly. |
+| `ai-analytics` | Prospecting data (lead sources, conversion rates, new leads over time) is available as analytics data. |
+| `marketing/whatsapp-campaign.md` | Prospects saved into CRM lists can be targeted with WhatsApp bulk campaigns. |
 
 ## Sidebar Navigation
 
