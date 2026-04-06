@@ -20,6 +20,7 @@ A collection of reusable **Agent Skills** for SuperAGI platform.
 ### Marketing
 - [`marketing/`](./marketing/) — marketing campaigns
   - [`marketing/whatsapp-campaign.md`](./marketing/whatsapp-campaign.md) — create and launch WhatsApp bulk campaigns
+  - [`marketing/email-campaign.md`](./marketing/email-campaign.md) — create and launch Email bulk campaigns (Drag-N-Drop, Plain Text, Custom HTML)
 
 ### Automation
 - [`workflows/`](./workflows/) — visual automation builder: 30+ node types, triggers, canvas, lifecycle

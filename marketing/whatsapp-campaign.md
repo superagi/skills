@@ -19,6 +19,7 @@ WhatsApp Campaigns allow users to send bulk messages to selected recipient lists
 | `crm/records.md` | Individual contacts and leads in CRM are the recipients. Use `crm/records.md` to view or manage the records inside those lists. |
 | `crm/tasks.md` | After a WhatsApp campaign, create follow-up tasks against recipient records using `crm/tasks.md`. |
 | `crm/SKILL.md` | Use the CRM CLI to bulk manage the recipient lists and records used in WhatsApp campaigns. |
+| `marketing/email-campaign.md` | Alternative bulk channel in the same Campaign module. Use this skill for WhatsApp blasts; use `marketing/email-campaign.md` for email blasts. |
 | `cold-outreach/SKILL.md` | Alternative bulk outreach via email/LinkedIn. Use `cold-outreach/SKILL.md` for AI-driven multi-step email campaigns; use this skill for one-shot WhatsApp bulk messaging. |
 | `sequences` | Sequences support Automatic WhatsApp Message steps for sequential outreach. Use this skill for bulk one-time blasts; use `sequences` for multi-step drip flows. |
 | `workflows` | The WhatsApp workflow node can send WhatsApp messages as part of an automation. Use `workflows` to trigger WhatsApp messages based on CRM events instead of manual campaign launches. |
