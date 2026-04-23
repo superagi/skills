@@ -8,6 +8,26 @@ platform: [linux, macos]
 
 SuperAGI Sales (`sales.superagi.com`) is an AI-native sales platform. The UI uses a left sidebar for navigation, a top header bar with search/notifications/avatar, and a main content area.
 
+## Authentication — DO NOTHING SPECIAL
+
+`browser_navigate` auto-handles auth for all `*.superagi.com` URLs. Just pass the target URL. You do NOT need to:
+
+- append `?agent_token=` yourself
+- read or manipulate `$SUPERAGI_AGENT_TOKEN`
+- check token expiry
+- mint a fresh token via curl or the CLI
+- rewrite `sales.superagi.com` to `sales-staging.superagi.com` (the wrapper does it based on `$ENV`)
+
+The wrapper also fixes common mistakes automatically: `?agent_auth_token=` and `?auth_token=` are rewritten to `?agent_token=`.
+
+**Correct usage:**
+```
+browser_navigate https://sales.superagi.com/prospect/find_leads
+# wrapper rewrites host (if ENV=staging), injects a fresh agent_token, navigates.
+```
+
+**If you end up on the login page anyway** (extremely rare — indicates an upstream auth problem, not a token/URL issue): stop, report the exact URL and the login-page snapshot to the user, and wait. Do NOT fill in email or password fields — the agent cannot complete human SSO and pasting tokens into password fields is never correct.
+
 ## Related Skills
 
 | Skill | Relationship |
